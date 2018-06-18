@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+		"Timestamp":1528984800000,
+        "HostTeam": "RUS", 
+		"GuestTeam": "SAU",
+		"HostGoals":5,
+		"GuestGoals":0
+    }, 
+    {
+        "id": 1,
+		"Timestamp":1529064000000,
+        "HostTeam": "EGY", 
+		"GuestTeam": "URU",
+		"HostGoals":0,
+		"GuestGoals":0
+    }
+]

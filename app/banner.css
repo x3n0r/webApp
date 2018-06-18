@@ -1,0 +1,27 @@
+#banner { 
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	background-color: #DDEEEE; 
+	min-width: 100%; 
+	z-index: 9999;/* set this to something high*/
+	display: flex;
+}
+
+#banner-content-middle, #banner-content-right { 
+	padding: 5px; 
+	border: 1px solid #000;
+}
+
+#banner-content-middle  { 
+	margin: 0 auto;
+	width: 80%;
+}
+
+#banner-content-right {  
+	margin: 0 right;
+	width: 8%;
+}
+
+.banner-content-right-button {
+}

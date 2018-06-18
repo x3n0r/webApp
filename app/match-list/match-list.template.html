@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+      <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+      </p>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="matches">
+        <li ng-repeat="match in $ctrl.matches | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+            class="thumbnail match-list-item">
+			
+			
+			<div>{{match.Timestamp | date:'dd/MM/yyyy @ HH:mm:ss'}}</div>
+			<div>{{match.HostTeam}}  {{match.HostGoals}} - {{match.GuestGoals}}  {{match.GuestTeam}}</div>
+			<div>Teamname Home: {{$ctrl.hostteam.name}} {{$ctrl.hostteam.snippet}}</div>
+			<div>Teamname Guest: {{$ctrl.guestteam.name}} {{$ctrl.guestteam.snippet}}</div>
+
+            <img ng-src="{{$ctrl.hostteam.imageUrl}}" alt="{{$ctrl.hostteam.id}}" />
+			<img ng-src="{{$ctrl.guestteam.imageUrl}}" alt="{{$ctrl.guestteam.id}}" />
+		  <!--
+          <a href="#!/matches/{{match.id}}">{{match.name}}</a>
+          <p>{{match.snippet}}</p>
+		  -->
+		  
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
