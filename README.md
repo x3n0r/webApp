@@ -15,5 +15,5 @@ http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/rel
 soccer data
 https://api.football-data.org/code_samples
 
-mysqldb
-xampp
+angularjs tabs example
+https://codepen.io/jasoncluck/pen/iDcbh
