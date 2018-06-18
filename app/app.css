@@ -1,5 +1,5 @@
 body {
-  padding: 20px;
+  padding: 30px;
 }
 
 #main-content { 
@@ -18,19 +18,33 @@ h1 {
 
 .matches li {
   clear: both;
-  height: 115px;
-  padding-top: 15px;
+  /*height: 115px;*/
+  /*padding-top: 15px;*/
 }
 
-.thumb {
+.thumb-left {
   float: left;
-  height: 100px;
-  margin: -0.5em 1em 1.5em 0;
-  padding-bottom: 1em;
-  width: 100px;
+  padding-right: 1em;
 }
 
-/* View: Match detail */
+.thumb-right {
+  clear: left;
+  padding-left: 1em;
+}
+
+.matches th {
+ padding-top:10px;
+ padding-bottom:10px;
+ background-color:rgba(255, 99, 71, 0.5);
+}
+
+.matches td {
+ padding-top:10px;
+ padding-bottom:10px;
+ background-color:rgba(0, 255, 171, 0.5);
+}
+
+/*
 .match {
   background-color: white;
   display: none;
@@ -95,3 +109,4 @@ h1 {
   font-size: 1.2em;
   font-weight: bold;
 }
+*/

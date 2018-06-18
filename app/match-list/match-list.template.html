@@ -24,19 +24,16 @@
         <li ng-repeat="match in $ctrl.matches | filter:$ctrl.query | orderBy:$ctrl.orderProp"
             class="thumbnail match-list-item">
 			
-			
-			<div>{{match.Timestamp | date:'dd/MM/yyyy @ HH:mm:ss'}}</div>
-			<div>{{match.HostTeam}}  {{match.HostGoals}} - {{match.GuestGoals}}  {{match.GuestTeam}}</div>
-			<div>Teamname Home: {{$ctrl.hostteam.name}} {{$ctrl.hostteam.snippet}}</div>
-			<div>Teamname Guest: {{$ctrl.guestteam.name}} {{$ctrl.guestteam.snippet}}</div>
-
-            <img ng-src="{{$ctrl.hostteam.imageUrl}}" alt="{{$ctrl.hostteam.id}}" />
-			<img ng-src="{{$ctrl.guestteam.imageUrl}}" alt="{{$ctrl.guestteam.id}}" />
-		  <!--
-          <a href="#!/matches/{{match.id}}">{{match.name}}</a>
-          <p>{{match.snippet}}</p>
-		  -->
-		  
+			<table width="100%">
+				<tr><th>
+					<div>{{match.Timestamp | date:'dd/MM/yyyy @ HH:mm:ss'}}</div>
+				</th></tr>
+				<tr><td>
+					<img class="thumb-left" ng-src="{{$ctrl.hostteam.imageUrl}}" alt="{{$ctrl.hostteam.id}}" />
+					<div class="matchup">{{$ctrl.hostteam.name}}  {{match.HostGoals}} - {{match.GuestGoals}}  {{$ctrl.guestteam.name}}</div>
+					<img class="thumb-right" ng-src="{{$ctrl.guestteam.imageUrl}}" alt="{{$ctrl.guestteam.id}}" />
+				</td></tr>
+			</table>
         </li>
       </ul>
 
