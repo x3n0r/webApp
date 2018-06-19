@@ -17,3 +17,12 @@ https://api.football-data.org/code_samples
 
 angularjs tabs example
 https://codepen.io/jasoncluck/pen/iDcbh
+
+login 
+http://jasonwatmore.com/post/2015/03/10/angularjs-user-registration-and-login-example-tutorial
+
+dropdown logon
+https://www.w3schools.com/Css/css_dropdowns.asp
+
+dynamically adding form fields
+https://stackoverflow.com/questions/32470928/angular-formly-adding-form-fields-dynamically-on-user-click
