@@ -16,35 +16,41 @@
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
     <script src="app.animations.js"></script>
-    <script src="core/core.module.js"></script>
-    <script src="core/checkmark/checkmark.filter.js"></script>
-    <script src="core/match/match.module.js"></script>
-    <script src="core/match/match.service.js"></script>
-	<script src="core/team/team.module.js"></script>
-    <script src="core/team/team.service.js"></script>
 
     <script src="match-list/match-list.module.js"></script>
     <script src="match-list/match-list.component.js"></script>
-	<script src="match-detail/match-detail.module.js"></script>
-    <script src="match-detail/match-detail.component.js"></script>
+	<script src="tabs/tabs.module.js"></script>
+    <script src="tabs/tabs.component.js"></script>
+	
+	<script src="app-services/authentication.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
+	<script src="app-services/user.service.js"></script>
+	<!--
+	<script src="home/home.controller.js"></script>
+    <script src="login/login.controller.js"></script>
+    <script src="register/register.controller.js"></script>-->
   </head>
-  <body>
-
+  <body>  
     <div id="banner">
 		<div id="banner-content-middle">
 			This is your banner text, centered and fixed at 80% in width
 		</div>
-		<div id="banner-content-right">
-			<div class="banner-content-right-button"><button type="button">Logon</button></div>
+		<div class="dropdown banner-content-right">
+			<button class="dropbtn">Logon</button>
+				<div class="dropdown-content">
+					<input class="logoninput" type="text" name="cupuser">
+					<div class="loginbtn-container"><button class="loginbtn">Login</button></div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<!--<div id="main-content">
-		<div class="view-container">
-			<div ng-view class="view-frame"></div>
-		</div>
-	</div>-->
-		<div class="view-container">
-			<div ng-view class="view-frame"></div>
-		</div>
+	
+	<div class="container-fluid">
+	</div
+	
+	<div class="view-container">
+		<div ng-view class="view-frame"></div>
+	</div>
+	
   </body>
 </html>

@@ -6,9 +6,7 @@ angular.
   component('matchList', {
     templateUrl: 'match-list/match-list.template.html',
 	controller: function MatchListController($http) {
-	var self = this;
-		self.orderProp = 'age';
-		
+	var self = this;		
 		$http.get('matches/matches/matches.json').then(function(response) {
 			self.matches = response.data;
 			$http.get('matches/teams/' + self.matches[0].HostTeam + '.json').then(function(response) {

@@ -1,4 +1,4 @@
 'use strict';
 
 // Define the `matchList` module
-angular.module('matchList', []);
+angular.module('tabs', []);

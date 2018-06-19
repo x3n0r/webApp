@@ -4,7 +4,6 @@
 angular.module('matchcatApp', [
   'ngAnimate',
   'ngRoute',
-  'core',
-  'matchDetail',
-  'matchList'
+  'matchList',
+  'tabs'
 ]);

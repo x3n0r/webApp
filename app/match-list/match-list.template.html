@@ -1,9 +1,7 @@
-<div class="container-fluid">
   <div class="row">
     <div class="col-md-2">
-      <!--Sidebar content-->
-
-      <p>
+	<!-- sidebar content -->
+     <!-- <p>
         Search:
         <input ng-model="$ctrl.query" />
       </p>
@@ -14,14 +12,13 @@
           <option value="name">Alphabetical</option>
           <option value="age">Newest</option>
         </select>
-      </p>
-
+      </p>-->
     </div>
     <div class="col-md-10">
       <!--Body content-->
 
       <ul class="matches">
-        <li ng-repeat="match in $ctrl.matches | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+        <li ng-repeat="match in $ctrl.matches | filter:$ctrl.query"
             class="thumbnail match-list-item">
 			
 			<div class="matchup"><h4>{{match.Timestamp | date:'dd/MM/yyyy @ HH:mm:ss'}}</h4></div>
@@ -44,5 +41,40 @@
       </ul>
 
     </div>
+	
+	
+	<div class="container">
+  <div class="row">
+  	<div class="col-md-2">
+  		<ul class="nav nav-pills nav-stacked">
+       	<li ng-class="{ active: isSet(1) }">
+          	<a href ng-click="setTab(1)">Home</a>
+       	</li>
+       	<li ng-class="{ active: isSet(2) }">
+          	<a href ng-click="setTab(2)">Profile</a>
+       	</li>
+       	<li ng-class="{ active: isSet(3) }">
+          	<a href ng-click="setTab(3)">Messages</a>
+       	</li>
+     	</ul>
+  	</div>
+    <div class="col-md-8">
+  		<div class="jumbotron">
+       	<div ng-show="isSet(1)">
+         	 <h1>Home page</h1>
+          	<p>Welcome to the website!</p>
+         	 <p><a class="btn btn-primary btn-lg" 			role="button">Learn more</a></p>
+        	</div>
+			<div ng-show="isSet(2)">
+          <h1>Profile page</h1>
+          <p>Profile information</p>
+     	</div>
+        <div ng-show="isSet(3)">
+          <h1>Messages</h1>
+          <p> Some messages </p>
+     	</div>
+  	</div>
+  </div>
+	
   </div>
 </div>
